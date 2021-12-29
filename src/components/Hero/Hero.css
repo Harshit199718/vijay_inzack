@@ -1,0 +1,66 @@
+.hero_container {
+  padding: 0 69px 0 105px;
+  min-height: 400px;
+}
+.hero-left {
+  margin-top: 80px;
+}
+.hero-left-title_container {
+  padding-top: 45px;
+  background: url("../../assets/effect.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+.hero-left-title {
+  color: #fff !important;
+  font-size: 38px !important;
+  font-weight: 700;
+  line-height: 48px;
+}
+.hero-left-types_container {
+  padding-right: 25px;
+}
+
+/* responsive media-queries [below_1024px] */
+
+@media (max-width: 1024px) {
+  .hero_container {
+    padding: 0px 40px;
+    min-height: 80vh;
+  }
+  .hero-left-types_container > .ant-row {
+    justify-content: center;
+  }
+  .hero-left {
+    margin: 0;
+  }
+  .hero-left > .ant-row {
+    justify-content: center;
+  }
+  .hero-left-title_container {
+    padding: 20px;
+  }
+  .hero-left > .ant-row .hero-left-title {
+    text-align: center;
+    font-size: 45px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  /* .hero-left {
+    order: 2 !important;
+  }
+  .hero-right {
+    order: 1 !important;
+  } */
+  .hero_container {
+    padding: 0 10px;
+  }
+  .hero-left-title_container {
+    background-size: 50%;
+  }
+  .hero-left > .ant-row .hero-left-title {
+    text-align: center;
+    font-size: 20px !important;
+  }
+}

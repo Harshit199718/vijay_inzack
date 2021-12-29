@@ -1,0 +1,29 @@
+.dashboard-header {
+  padding: 0 6px;
+  border-bottom: 1px solid #f3dfdf;
+}
+.dashboard-header .logo-text {
+  margin: 0;
+  font-weight: 700;
+  padding: 15px 0;
+  cursor: pointer;
+}
+.user-name {
+  margin: 0 10px !important;
+  font-weight: 700 !important;
+}
+.user-image_container {
+  height: 100%;
+  border-bottom: 2px solid #f3dfdf;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.user-image {
+  background: #455a64;
+  vertical-align: middle;
+}
+.user-image .user-letter {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+}

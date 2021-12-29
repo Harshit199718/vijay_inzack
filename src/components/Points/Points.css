@@ -1,0 +1,32 @@
+.points-section_container {
+  margin-top: 10px;
+  padding: 0 4px 0 15px;
+}
+.points-img_container img {
+  margin-top: -30%;
+  width: 100%;
+}
+.list-point {
+  font-weight: 600;
+  margin: 0;
+}
+
+/* responsive media-queries [below_1024px] */
+
+@media (max-width: 1024px) {
+  .points-img_container img {
+    margin-top: 0;
+  }
+  .points-section_container {
+    padding: 0 20px;
+  }
+}
+
+/* responsive media-queries [below_576px] */
+
+@media (max-width: 576px) {
+  .list-point {
+    font-size: 18px !important;
+    margin: 0 !important;
+  }
+}
