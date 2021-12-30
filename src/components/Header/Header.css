@@ -69,6 +69,7 @@
     max-height: 0;
     transition: 0.5s;
     overflow: hidden;
+    box-shadow: 0 10px 10px -10px #000;
   }
   .mobile-nav-links_container-active {
     max-height: 40vh !important;

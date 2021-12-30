@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Row, Tabs, Typography } from "antd";
 import movingAvatar from "../../assets/gifs/moving-avatar.gif";
 import rightArrow from "../../assets/rightArrow.png";
@@ -9,12 +9,22 @@ import DesignButton from "../Button/Button";
 
 const { TabPane } = Tabs;
 const { Title } = Typography;
+const designs = ["ficco designs", "cornetti designs", "Percy designs"];
+const designs2 = ["ficco designs2", "cornetti designs2", "Percy designs2"];
 
 function Designs(props) {
   const [selectedTab, setSelectedTab] = useState("1");
   const [activeDesign, setActiveDesign] = useState("ficco designs");
   const [btnsPosition, setBtnsPosition] = useState(0);
   const { type } = props;
+
+  useEffect(() => {
+    if (selectedTab === "1") {
+      setActiveDesign(designs[0]);
+    } else {
+      setActiveDesign(designs2[0]);
+    }
+  }, [selectedTab]);
   return (
     <Row className="designs">
       <Col lg={7} md={24} className="design-selector_container">
@@ -41,40 +51,37 @@ function Designs(props) {
               <div style={{ position: "relative" }}>
                 <Row
                   align="middle"
-                  style={{ transform: `translateX(${btnsPosition}%)` }}
+                  // style={{ transform: `translateX(${btnsPosition}%)` }}
                   className="design-btns_container"
                 >
-                  <DesignButton
-                    active={activeDesign === "ficco designs"}
-                    onClick={() => setActiveDesign("ficco designs")}
-                  >
-                    ficco designs
-                  </DesignButton>
-                  <DesignButton
-                    active={activeDesign === "cornetti designs"}
-                    onClick={() => setActiveDesign("cornetti designs")}
-                  >
-                    cornetti designs
-                  </DesignButton>
-                  <DesignButton
-                    active={activeDesign === "Percy designs"}
-                    onClick={() => setActiveDesign("Percy designs")}
-                  >
-                    Percy designs
-                  </DesignButton>
+                  {designs.map((design) => (
+                    <DesignButton
+                      active={activeDesign === design}
+                      onClick={() => setActiveDesign(design)}
+                      style={{
+                        transform: `translateX(-${btnsPosition * 100}%)`,
+                      }}
+                    >
+                      {design}
+                    </DesignButton>
+                  ))}
                 </Row>
-                <img
-                  className="btn-slider"
-                  src={rightArrow}
-                  alt=""
-                  onClick={() => setBtnsPosition(btnsPosition - 33.33)}
-                />
-                <img
-                  className="btn-slider btn-slider-left"
-                  src={rightArrow}
-                  alt=""
-                  onClick={() => setBtnsPosition(btnsPosition + 33.33)}
-                />
+                {btnsPosition > 0 ? (
+                  <img
+                    className="btn-slider btn-slider-left"
+                    src={rightArrow}
+                    alt=""
+                    onClick={() => setBtnsPosition(btnsPosition - 1)}
+                  />
+                ) : null}
+                {btnsPosition < designs.length - 2 ? (
+                  <img
+                    className="btn-slider"
+                    src={rightArrow}
+                    alt=""
+                    onClick={() => setBtnsPosition(btnsPosition + 1)}
+                  />
+                ) : null}
               </div>
               <Patterns designs={shirtDesigns} />
             </TabPane>
@@ -93,6 +100,34 @@ function Designs(props) {
               }
               key="2"
             >
+              <div style={{ position: "relative" }}>
+                <Row
+                  align="middle"
+                  style={{ transform: `translateX(${btnsPosition}%)` }}
+                  className="design-btns_container"
+                >
+                  {designs2.map((design) => (
+                    <DesignButton
+                      active={activeDesign === design}
+                      onClick={() => setActiveDesign(design)}
+                    >
+                      {design}
+                    </DesignButton>
+                  ))}
+                </Row>
+                <img
+                  className="btn-slider"
+                  src={rightArrow}
+                  alt=""
+                  onClick={() => setBtnsPosition(btnsPosition - 33.33)}
+                />
+                <img
+                  className="btn-slider btn-slider-left"
+                  src={rightArrow}
+                  alt=""
+                  onClick={() => setBtnsPosition(btnsPosition + 33.33)}
+                />
+              </div>
               <Patterns designs={trouserDesigns} />
             </TabPane>
           </Tabs>

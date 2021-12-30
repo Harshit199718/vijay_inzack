@@ -11,16 +11,25 @@
 }
 
 @media (max-width: 768px) {
-  
 }
 @media (max-width: 576px) {
   .desktop-dashboard {
     display: none;
   }
   .designs-card {
-    display: flex;
+    display: flex !important;
   }
   .close-btn {
     margin-bottom: 10px;
+  }
+  .logo-text {
+    padding: 0 !important;
+  }
+  .logo-text_container {
+    display: none;
+  }
+  .designs-menu-toggler {
+    color: #000;
+    cursor: pointer;
   }
 }

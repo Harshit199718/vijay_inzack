@@ -11,6 +11,7 @@ function Avatar(props) {
       justify="center"
       align="top"
       style={{
+        width: props.width ? props.width : "",
         height: "650px",
         borderRadius: "40px",
         overflow: "hidden",

@@ -1,6 +1,7 @@
 .dashboard-header {
   padding: 0 6px;
   border-bottom: 1px solid #f3dfdf;
+  position: relative;
 }
 .dashboard-header .logo-text {
   margin: 0;
@@ -26,4 +27,38 @@
   margin: 0;
   color: #fff;
   font-size: 16px;
+}
+
+.designs-selector_container {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .dashboard-header {
+    padding: 15px 6px;
+  }
+  .designs-selector_container > .category {
+    padding: 10px 20px;
+  }
+  .designs-selector_container > .sub-category {
+    padding: 10px 20px;
+    margin-left: 20px;
+  }
+  .designs-selector_container {
+    position: absolute;
+    top: 95%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    max-height: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 11;
+    box-shadow: 0 10px 10px -10px #000;
+    display: block;
+  }
+  .designs-selector_container.dashboard-menu-active {
+    max-height: 100vh;
+    transition: 0.5s;
+  }
 }

@@ -9,9 +9,9 @@ function MobileNav(props) {
   const navigate = useNavigate();
   const location = useLocation();
   const routes = [
-    { text: "Our partners", path: "/vijay_inzack/partners" },
-    { text: "Pricing", path: "/vijay_inzack/pricing" },
-    { text: "Contact us", path: "/vijay_inzack/contact" },
+    { text: "Our partners", path: "/partners" },
+    { text: "Pricing", path: "/pricing" },
+    { text: "Contact us", path: "/contact" },
   ];
   return (
     <Col
@@ -38,10 +38,7 @@ function MobileNav(props) {
             </Col>
           ))}
           <Col span={24}>
-            <Row
-              justify="center"
-              onClick={() => navigate("/vijay_inzack/dashboard")}
-            >
+            <Row justify="center" onClick={() => navigate("/dashboard")}>
               <img
                 src={googleLogin}
                 alt="Login with google"

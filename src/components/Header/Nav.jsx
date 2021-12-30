@@ -8,9 +8,9 @@ function Nav(props) {
   const navigate = useNavigate();
   const location = useLocation();
   const routes = [
-    { text: "Our partners", path: "/vijay_inzack/partners" },
-    { text: "Pricing", path: "/vijay_inzack/pricing" },
-    { text: "Contact us", path: "/vijay_inzack/contact" },
+    { text: "Our partners", path: "/partners" },
+    { text: "Pricing", path: "/pricing" },
+    { text: "Contact us", path: "/contact" },
   ];
   return (
     <Col className="desktop-nav-links_container" lg={14} md={18}>

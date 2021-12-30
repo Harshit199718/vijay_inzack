@@ -22,7 +22,7 @@ function Header(props) {
                   props.text === "light" ? "light_text" : "dark_text"
                 }`}
                 level={1}
-                onClick={() => navigate("/vijay_inzack/")}
+                onClick={() => navigate("/")}
               >
                 Inzack
               </Title>
@@ -41,7 +41,7 @@ function Header(props) {
         </Row>
       </Col>
       <Col xl={12} lg={9} md={6}>
-        <Row justify="end" onClick={() => navigate("/vijay_inzack/dashboard")}>
+        <Row justify="end" onClick={() => navigate("/dashboard")}>
           <img
             src={googleLogin}
             alt="Login with google"
