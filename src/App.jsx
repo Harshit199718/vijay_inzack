@@ -11,11 +11,11 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/vijay_inzack/" element={<Landing />} />
-          <Route path="/vijay_inzack/dashboard" element={<Dashboard />} />
-          <Route path="/vijay_inzack/pricing" element={<Pricing />} />
-          <Route path="/vijay_inzack/partners" element={<Partners />} />
-          <Route path="/vijay_inzack/contact" element={<Contact />} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<h1>404</h1>} />
         </Routes>
       </BrowserRouter>
