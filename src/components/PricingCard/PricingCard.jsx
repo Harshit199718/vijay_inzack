@@ -2,35 +2,29 @@ import React from "react";
 import { Col, Row, Typography } from "antd";
 import usageIcon from "../../assets/usage.png";
 import limitIcon from "../../assets/limit.png";
+import "./PricingCard.css";
 
 const { Title, Text } = Typography;
 
 function PricingCard(props) {
   const { plan, usage, limit } = props;
   return (
-    <Row
-      style={{
-        height: "418px",
-        padding: "37px 100px",
-        borderRadius: "20px",
-        boxShadow: "0px 4px 40px rgba(0, 0, 0, 0.25)",
-      }}
-    >
+    <Row className="pricing-card">
       <Col span={24}>
-        <Title level={2} style={{ textAlign: "center" }}>
+        <Title level={2} className="text_align-center">
           <Text>{plan}</Text>
         </Title>
       </Col>
       <Col span={24}>
-        <Title level={4} style={{ textAlign: "center" }}>
+        <Title level={4} className="text_align-center">
           <img src={usageIcon} alt="" />
-          <Text style={{ display: "block", fontWeight: "700" }}>{usage}</Text>
+          <Text className="pricing-card-text">{usage}</Text>
         </Title>
       </Col>
       <Col span={24}>
-        <Title level={4} style={{ textAlign: "center" }}>
+        <Title level={4} className="text_align-center">
           <img src={limitIcon} alt="" />
-          <Text style={{ display: "block", fontWeight: "700" }}>{limit}</Text>
+          <Text className="pricing-card-text">{limit}</Text>
         </Title>
       </Col>
     </Row>

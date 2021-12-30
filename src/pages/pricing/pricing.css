@@ -1,0 +1,15 @@
+.pricing_container {
+  padding: 60px 128px;
+}
+
+@media (max-width: 768px) {
+  .pricing_container {
+    padding: 40px 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pricing_container {
+    padding: 40px 20px;
+  }
+}

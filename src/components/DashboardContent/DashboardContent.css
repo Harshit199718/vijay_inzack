@@ -4,16 +4,22 @@
   width: 95%;
   margin: auto;
   padding: 10px;
+  display: none !important;
 }
 .dashboard-content-tabs {
   min-height: calc(100vh - 77.73px);
 }
 
+@media (max-width: 768px) {
+  
+}
 @media (max-width: 576px) {
   .desktop-dashboard {
     display: none;
   }
-
+  .designs-card {
+    display: flex;
+  }
   .close-btn {
     margin-bottom: 10px;
   }

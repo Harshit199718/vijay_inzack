@@ -1,6 +1,7 @@
 import { Col, Row, Typography } from "antd";
 import React from "react";
 import Header from "../../components/Header/Header";
+import "./contact.css";
 
 const { Title, Text } = Typography;
 
@@ -8,31 +9,24 @@ function Contact() {
   return (
     <div>
       <Header textColor="#000" />
-      <div style={{ padding: "60px 128px" }}>
-        <Row
-          style={{
-            borderRadius: "10px",
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
-            height: "570px",
-            padding: "55px 32px",
-          }}
-        >
+      <div className="contact_container">
+        <Row className="contact-details_container">
           <Col span={24}>
-            <Title level={3} style={{ fontWeight: "800", margin: "0" }}>
+            <Title level={3} className="detail-heading">
               looking for customized solution?
             </Title>
-            <Title level={4} style={{ fontWeight: "600", margin: "0" }}>
+            <Title level={4} className="detail-text">
               reach us on <Text>hello@inzack.com</Text>
             </Title>
           </Col>
           <Col span={24}>
             <Row align="bottom" style={{ height: "100%" }}>
-              <Col span={12}></Col>
-              <Col span={12}>
-                <Title level={3} style={{ fontWeight: "800", margin: "0" }}>
+              <Col md={12} xs={24}></Col>
+              <Col md={12} xs={24}>
+                <Title level={3} className="detail-heading">
                   Registered Office
                 </Title>
-                <Title level={4} style={{ fontWeight: "600", margin: "0" }}>
+                <Title level={4} className="detail-text">
                   T-Hub Foundation Catalyst IIIT-Hyderabad, Gachibowli,
                   Telangana 500032, India
                 </Title>
