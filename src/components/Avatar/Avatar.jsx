@@ -1,4 +1,4 @@
-import { Row } from "antd";
+import { Col, Row } from "antd";
 import React from "react";
 import movingAvatar from "../../assets/gifs/moving-avatar.gif";
 import movingAvatar2 from "../../assets/gifs/moving-avatar2.gif";
@@ -19,18 +19,22 @@ function Avatar(props) {
         padding: "20px 0",
       }}
     >
-      <div>
-        <img
-          style={{ float: "right", marginBottom: "5px" }}
-          src={lock}
-          alt=""
-        />
+      <Col span={20}>
+        <Row justify="end">
+          <img
+            style={{ float: "right", marginBottom: "5px" }}
+            src={lock}
+            alt=""
+          />
+        </Row>
+      </Col>
+      <Col>
         <img
           style={imgStyle}
           src={props.activeType === "Shirts" ? movingAvatar : movingAvatar2}
           alt=""
         />
-      </div>
+      </Col>
     </Row>
   );
 }

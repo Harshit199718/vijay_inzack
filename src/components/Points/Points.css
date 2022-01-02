@@ -3,11 +3,12 @@
   padding: 0 4px 0 15px;
 }
 .points-img_container img {
-  margin-top: -30%;
+  margin-top: -33%;
   width: 100%;
 }
 .list-point {
   font-weight: 600;
+  font-size: 28px !important;
   margin: 0;
 }
 
