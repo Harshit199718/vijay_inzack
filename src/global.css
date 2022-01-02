@@ -30,7 +30,7 @@ body {
 
 .ant-tabs-tab:not(.designs .ant-tabs-tab) {
   margin: 0 !important;
-  padding: 20px !important;
+  padding: 14px !important;
   z-index: 2;
 }
 .ant-tabs-tab-active:not(.designs .ant-tabs-tab-active) .qwerty {

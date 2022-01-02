@@ -9,7 +9,6 @@ import close from "../../assets/close.png";
 import movingAvatar from "../../assets/gifs/moving-avatar.gif";
 
 const designs = ["ficco designs", "cornetti designs", "Percy designs"];
-const designs2 = ["ficco designs2", "cornetti designs2", "Percy designs2"];
 
 function MobileDashboard(props) {
   const [activeDesign, setActiveDesign] = useState("ficco designs");
