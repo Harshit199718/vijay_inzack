@@ -13,7 +13,7 @@ function Header(props) {
 
   return (
     <Row className="header_container" align="middle">
-      <Col xl={12} lg={15} md={18} sm={24}>
+      <Col xl={12} lg={15} md={18} xs={24}>
         <Row align="middle" justify="space-between">
           <Col lg={10} md={6} xs={8}>
             <Typography>
@@ -28,7 +28,7 @@ function Header(props) {
               </Title>
             </Typography>
           </Col>
-          <Col xs={2} sm={0}>
+          <Col xs={2} md={0}>
             <i
               class={`fas fa-bars cursor-pointer ${
                 props.text === "light" ? "light_text" : "dark_text"

@@ -9,6 +9,9 @@
 .dashboard-content-tabs {
   min-height: calc(100vh - 77.73px);
 }
+.logo-text {
+  font-size: 35px !important;
+}
 
 @media (max-width: 768px) {
 }
@@ -31,5 +34,6 @@
   .designs-menu-toggler {
     color: #000;
     cursor: pointer;
+    z-index: 12;
   }
 }

@@ -23,7 +23,7 @@ function MobileDashboard(props) {
         alt=""
         onClick={() => setShowDesigns(false)}
       />
-      <Patterns designs={shirtDesigns} />
+      <Patterns setShowDesigns={setShowDesigns} designs={shirtDesigns} />
       <div className="design-btns" style={{ position: "relative" }}>
         <Row
           align="middle"
@@ -102,7 +102,15 @@ function MobileDashboard(props) {
           align="middle"
           className="cursor-pointer"
           style={{ marginRight: "auto", marginLeft: "20px" }}
-          onClick={() => setShowDesigns(true)}
+          onClick={() => {
+            props.setMenuOpen(false);
+            setTimeout(
+              () => {
+                setShowDesigns(true);
+              },
+              props.menuOpen ? 200 : 0
+            );
+          }}
         >
           <Row
             align="middle"

@@ -9,7 +9,7 @@ function Patterns(props) {
       <Row gutter={[12, 12]} className="patterns_container">
         {designs.map((design) => {
           return (
-            <Col span={8}>
+            <Col span={8} onClick={() => props.setShowDesigns(false)}>
               <img className="pattern-img" src={design} alt="" />
             </Col>
           );

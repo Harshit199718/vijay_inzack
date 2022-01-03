@@ -7,6 +7,7 @@ import movingAvatar from "../../assets/gifs/moving-avatar.gif";
 
 function Dashboard() {
   const [selectedType, setSelectedType] = useState("Shirts");
+  const [menuOpen, setMenuOpen] = useState(false);
   const designs = [
     { category: "Formals", types: ["Shirts", "Trousers"] },
     { category: "Casuals", types: ["T Shirts", "Trousers"] },
@@ -17,9 +18,19 @@ function Dashboard() {
   }, []);
   return (
     <div id="dashboard-page">
-      <DashboardHeader designs={designs} setSelectedType={setSelectedType} />
+      <DashboardHeader
+        designs={designs}
+        setSelectedType={setSelectedType}
+        selectedType={selectedType}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      />
       <DashboardContent />
-      <MobileDashboard selectedType={selectedType} />
+      <MobileDashboard
+        selectedType={selectedType}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      />
     </div>
   );
 }

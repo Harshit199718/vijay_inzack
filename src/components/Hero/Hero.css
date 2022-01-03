@@ -56,8 +56,11 @@
   .hero_container {
     padding: 0 10px;
   }
+  .hero-left-title {
+    display: none;
+  }
   .hero-left-title_container {
-    background-size: 50%;
+    background: none;
   }
   .hero-left > .ant-row .hero-left-title {
     text-align: center;

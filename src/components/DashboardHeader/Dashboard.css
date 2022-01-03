@@ -12,6 +12,7 @@
 .user-name {
   margin: 0 10px !important;
   font-weight: 700 !important;
+  font-size: 18px !important;
 }
 .user-image_container {
   height: 100%;
@@ -46,6 +47,7 @@
   }
   .type_container .type-text {
     font-size: 14px !important;
+    white-space: nowrap;
     margin: 0 !important;
     color: #8b8b8b;
   }
@@ -61,14 +63,15 @@
   }
   .designs-selector_container {
     position: absolute;
-    top: 95%;
+    top: 0;
     left: 0;
+    padding-top: 60px;
     max-width: 0;
     background: #fff;
     transition: 0.5s;
     overflow: hidden;
     z-index: 11;
-    box-shadow: 0 10px 10px -10px #000;
+    box-shadow: 10px 10px 10px -10px #000;
     display: block;
   }
   .designs-selector_container.dashboard-menu-active {

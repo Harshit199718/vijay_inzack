@@ -9,14 +9,12 @@ const { Title } = Typography;
 
 function DashboardHeader(props) {
   const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <Row className="dashboard-header" justify="space-between">
       <div
         className={`designs-selector_container ${
-          menuOpen ? "dashboard-menu-active" : ""
+          props.menuOpen ? "dashboard-menu-active" : ""
         }`}
       >
         <Row className="category">
@@ -29,19 +27,25 @@ function DashboardHeader(props) {
           <div className="type_container">
             <Title
               className={`type-text ${
-                selectedCategory === "Shirts" ? "active-type" : ""
+                props.selectedType === "Shirts" ? "active-type" : ""
               }`}
               level={5}
-              onClick={() => setSelectedCategory("Shirts")}
+              onClick={() => {
+                props.setSelectedType("Shirts");
+                props.setMenuOpen(false);
+              }}
             >
               Shirts
             </Title>
             <Title
               className={`type-text ${
-                selectedCategory === "Trousers" ? "active-type" : ""
+                props.selectedType === "Formals-Trousers" ? "active-type" : ""
               }`}
               level={5}
-              onClick={() => setSelectedCategory("Trousers")}
+              onClick={() => {
+                props.setSelectedType("Formals-Trousers");
+                props.setMenuOpen(false);
+              }}
             >
               Trousers
             </Title>
@@ -57,19 +61,25 @@ function DashboardHeader(props) {
           <div className="type_container">
             <Title
               className={`type-text ${
-                selectedCategory === "T Shirts" ? "active-type" : ""
+                props.selectedType === "T Shirts" ? "active-type" : ""
               }`}
               level={5}
-              onClick={() => setSelectedCategory("T Shirts")}
+              onClick={() => {
+                props.setSelectedType("T Shirts");
+                props.setMenuOpen(false);
+              }}
             >
               T Shirts
             </Title>
             <Title
               className={`type-text ${
-                selectedCategory === "Formals-Trousers" ? "active-type" : ""
+                props.selectedType === "Casuals-Trousers" ? "active-type" : ""
               }`}
               level={5}
-              onClick={() => setSelectedCategory("Formals-Trousers")}
+              onClick={() => {
+                props.setSelectedType("Casuals-Trousers");
+                props.setMenuOpen(false);
+              }}
             >
               Trousers
             </Title>
@@ -83,7 +93,7 @@ function DashboardHeader(props) {
       </Typography>
       <i
         className="fas fa-bars designs-menu-toggler"
-        onClick={() => setMenuOpen(!menuOpen)}
+        onClick={() => props.setMenuOpen(!props.menuOpen)}
       ></i>
       <Row align="middle">
         <Typography>

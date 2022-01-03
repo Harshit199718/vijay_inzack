@@ -26,7 +26,7 @@ function Hero() {
           </Col>
           <Col xl={4} xs={24} className="hero-left-types_container">
             <Row gutter={[0, 30]}>
-              <Col xl={24} xs={4}>
+              <Col xl={24} xs={5}>
                 <Types
                   type="Shirts"
                   image={shirt}
@@ -34,7 +34,7 @@ function Hero() {
                   setActive={setActiveType}
                 />
               </Col>
-              <Col xl={24} xs={4}>
+              <Col xl={24} xs={5}>
                 <Types
                   type="T Shirts"
                   image={tshirt}
@@ -42,7 +42,7 @@ function Hero() {
                   setActive={setActiveType}
                 />
               </Col>
-              <Col xl={24} xs={4}>
+              <Col xl={24} xs={5}>
                 <Types
                   type="Trousers"
                   image={trousers}
